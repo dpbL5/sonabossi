@@ -1,0 +1,11 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Arrow } from "./Brand";
+export const products = [
+ { id: "noi-that", name: "Sơn nội thất", image: "/images/products/glossy-interior.jpg", label: "Không gian bên trong", description: "Sắc màu hài hòa cho tường và trần, hoàn thiện cá tính riêng của mỗi không gian.", application: "Tường, trần phòng khách, phòng ngủ và không gian sinh hoạt trong nhà.", note: "Trao đổi độ bóng, màu sắc và nhu cầu vệ sinh bề mặt để chọn dòng sơn phù hợp." },
+ { id: "ngoai-that", name: "Sơn ngoại thất", image: "/images/products/nano-super-glossy.jpg", label: "Bề mặt ngoài trời", description: "Hoàn thiện diện mạo mặt ngoài, kết nối kiến trúc với cảnh quan xung quanh.", application: "Tường ngoài, mặt tiền nhà ở và các bề mặt kiến trúc ngoài trời.", note: "Cần đánh giá nền tường, hướng nắng và điều kiện thời tiết trước khi lựa chọn hệ sơn." },
+ { id: "chong-tham", name: "Sơn chống thấm", image: "/images/products/nano-water-proof-color.jpg", label: "Bảo vệ từ bề mặt", description: "Lựa chọn giải pháp cho khu vực tiếp xúc với nước và có nguy cơ thấm ẩm.", application: "Các hạng mục cần kiểm soát thấm, lựa chọn theo nền và điều kiện tiếp xúc với nước.", note: "Khảo sát nguồn thấm và tình trạng bề mặt trước khi lựa chọn vật liệu và phương án xử lý." },
+];
+export default function Services() {
+ return <section className="section"><div className="container"><div className="section-heading"><h2>Giải pháp cho từng <br />bề mặt công trình.</h2><div><p>Từ lớp sơn hoàn thiện đến giải pháp chống thấm. <br />Khám phá nhóm sản phẩm phù hợp với hạng mục của bạn.</p><Link className="text-link" href="/san-pham">Xem tất cả sản phẩm <Arrow /></Link></div></div><div className="category-grid">{products.map(product => <Link className="category-card" href={`/san-pham#${product.id}`} key={product.id}><div className="category-photo"><Image src={product.image} alt={`${product.name} — ảnh bao bì ABOSSI`} fill sizes="(max-width: 760px) 100vw, 33vw"/><span className="round-arrow"><Arrow diagonal /></span></div><div className="category-text"><span>{product.label}</span><h3>{product.name}</h3><p>{product.description}</p></div></Link>)}</div></div></section>;
+}

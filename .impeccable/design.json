@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-07T07:28:29.304853+00:00",
+  "title": "Design System: Sơn ABOSSI",
+  "extensions": {
+    "shadows": [],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": "180ms",
+        "purpose": "Button/link colors and 3px arrow translation."
+      },
+      {
+        "name": "image-hover",
+        "value": "350ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Linked category/project image scale(1.035)."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Disable transitions and animations; use automatic scrolling."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile-nav-max",
+        "value": "900px"
+      },
+      {
+        "name": "stacked-layout-max",
+        "value": "760px"
+      },
+      {
+        "name": "narrow-mobile-max",
+        "value": "380px"
+      },
+      {
+        "name": "wide-hero-min",
+        "value": "1600px"
+      }
+    ]
+  }
+}

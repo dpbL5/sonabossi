@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sơn ABOSSI
 
-## Getting Started
+Website tiếng Việt dành cho đại lý và nhà thầu, xây dựng bằng Next.js App Router, React và CSS dùng token chung.
 
-First, run the development server:
+## Chạy dự án
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở http://localhost:3000. Kiểm tra production: `npm run build`, sau đó `npm start`. Nếu môi trường chặn cổng nội bộ của Turbopack, dùng `npm run build -- --webpack` hoặc `npm run dev -- --webpack`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Thiết kế và nội dung
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `DESIGN.md`: hệ thống thiết kế được viết trước khi triển khai, đối chiếu lại với giao diện hoàn thiện.
+- `PRODUCT.md`: đối tượng, nguồn nội dung và những thông tin cần bổ sung.
+- `src/app/globals.css`: màu sắc, typography, layout, responsive và trạng thái tương tác.
+- `src/data/products.json`: 13 sản phẩm, tên dòng, label trên bao bì và ánh xạ tên ảnh gốc.
+- `src/components/ProductCatalog.tsx`: danh mục có bộ lọc 4 nhóm; ảnh bao bì mở được để đọc nhãn.
+- `src/components/Services.tsx`: ba nhóm giải pháp và ảnh sản phẩm đại diện trên trang chủ.
+- `src/components/Projects.tsx`: dữ liệu các không gian minh họa.
+- `src/components/Contact.tsx`: chuẩn bị và sao chép nội dung hợp tác trên trình duyệt. Chưa có backend, không gửi hay lưu dữ liệu ra ngoài.
 
-## Learn More
+| Route | Nội dung |
+| --- | --- |
+| `/` | Trang chủ |
+| `/gioi-thieu` | Giới thiệu thương hiệu |
+| `/san-pham` | Danh mục sơn, bộ lọc, thông tin ứng dụng |
+| `/du-an` | Không gian tham khảo và bộ lọc loại công trình |
 
-To learn more about Next.js, take a look at the following resources:
+## Trước khi đưa vào sử dụng chính thức
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Bổ sung catalogue kỹ thuật (quy cách và thông số), hồ sơ công trình thực tế, thông tin liên hệ và kênh nhận yêu cầu hợp tác. Thay dữ liệu minh họa bằng nội dung đã xác minh. Hiện không tự tạo chứng chỉ, chính sách giá hoặc dự án đã thi công.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Logo và banner giữ nguyên từ tài nguyên người dùng. Font Be Vietnam Pro lưu local. Ảnh kiến trúc minh họa từ Unsplash; nguồn ở `public/images/SOURCES.md`. Tham chiếu thiết kế: https://weblium.com/templates/demo/flooring-solutions-website-design-310.
 
-## Deploy on Vercel
+## SEO
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tên miền chuẩn: `https://sonabossi.com` (chủ website xác nhận). `src/lib/seo.ts` quản lý title, description, canonical và metadata chia sẻ riêng cho 4 trang. `robots.txt` tham chiếu `sitemap.xml`; sitemap chỉ liệt kê URL trang, không liệt kê anchor/bộ lọc. Dữ liệu JSON-LD WebSite khai báo tên và ngôn ngữ website, không tự tạo thông tin doanh nghiệp hoặc đánh giá.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Nếu đổi tên miền, đặt `SITE_URL` thành origin HTTP(S) mới và build lại. Khi triển khai, cấu hình HTTPS và chuyển hướng các biến thể tên miền về tên miền chuẩn ở hosting, rồi gửi sitemap vào Google Search Console. Thay đổi metadata không bảo đảm điểm số cụ thể hoặc thứ hạng tìm kiếm.
+
+Kiểm tra HTML SEO của bản build: `node scripts/check-seo.mjs`.
