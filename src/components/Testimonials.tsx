@@ -37,7 +37,11 @@ export default function Testimonials() {
             >
               <div className="flex text-[#ba0c2f] mb-4">
                 {[...Array(5)].map((_, j) => (
-                  <svg key={j} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <svg
+                    key={j}
+                    className="w-5 h-5 fill-current"
+                    viewBox="0 0 20 20"
+                  >
                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                   </svg>
                 ))}
@@ -50,7 +54,9 @@ export default function Testimonials() {
                   {item.name.charAt(0)}
                 </div>
                 <div className="ml-3">
-                  <div className="font-semibold text-[#00205b]">{item.name}</div>
+                  <div className="font-semibold text-[#00205b]">
+                    {item.name}
+                  </div>
                   <div className="text-sm text-gray-500">{item.role}</div>
                 </div>
               </div>
