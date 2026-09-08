@@ -1,0 +1,94 @@
+"use server";
+
+import { Resend } from "resend";
+
+export type ContactFormState = {
+  ok: boolean;
+  message?: string;
+};
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Sandbox resend.dev chỉ giao được tới email tài khoản Resend —
+// sau khi verify domain riêng thì đổi RESEND_CONTACT_FROM/TO trong .env
+const FROM =
+  process.env.RESEND_CONTACT_FROM?.trim() || "Website Sonabossi <onboarding@resend.dev>";
+const TO = process.env.RESEND_CONTACT_TO?.trim() || "";
+
+function esc(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+export async function sendContact(
+  _prev: ContactFormState,
+  formData: FormData,
+): Promise<ContactFormState> {
+  const name = String(formData.get("name") ?? "").trim();
+  const phone = String(formData.get("phone") ?? "").trim();
+  const email = String(formData.get("email") ?? "").trim();
+
+  if (!name || !phone || !email) {
+    return { ok: false, message: "Vui lòng điền họ tên, số điện thoại và email." };
+  }
+
+  const payload = {
+    name,
+    phone,
+    email,
+    role: String(formData.get("role") ?? "").trim(),
+    region: String(formData.get("region") ?? "").trim(),
+    message: String(formData.get("message") ?? "").trim().slice(0, 2000),
+  };
+
+  if (!TO) {
+    console.error("RESEND_CONTACT_TO chưa được cấu hình trong .env");
+    return { ok: false, message: "Hệ thống đang bận, vui lòng thử lại sau." };
+  }
+
+  const rows = [
+    ["Họ và tên", payload.name],
+    ["Số điện thoại", payload.phone],
+    ["Email", payload.email],
+    ["Bạn là", payload.role],
+    ["Khu vực", payload.region],
+    ["Nhu cầu", payload.message],
+  ] as const;
+
+  const html = `
+    <div style="font-family:Arial,sans-serif;font-size:14px;color:#111">
+      <h2 style="margin:0 0 16px">Lead mới từ landing page Sonabossi</h2>
+      <table cellpadding="8" cellspacing="0" style="border-collapse:collapse">
+        ${rows
+          .filter(([, value]) => value)
+          .map(
+            ([label, value]) =>
+              `<tr><td style="border:1px solid #ddd;font-weight:bold;vertical-align:top">${label}</td><td style="border:1px solid #ddd;white-space:pre-wrap">${esc(value)}</td></tr>`,
+          )
+          .join("")}
+      </table>
+      <p style="color:#666;margin-top:16px">Reply email này để trả lời trực tiếp cho khách.</p>
+    </div>`;
+
+  const { data, error } = await resend.emails.send(
+    {
+      from: FROM,
+      to: TO,
+      replyTo: payload.email,
+      subject: `Lead mới: ${payload.name} (${payload.phone})`,
+      html,
+    },
+    { idempotencyKey: `contact-form/${crypto.randomUUID()}` },
+  );
+
+  if (error) {
+    console.error("Resend gửi mail thất bại:", error.message);
+    return { ok: false, message: "Gửi email thất bại, bạn vui lòng thử lại sau." };
+  }
+
+  console.log("Đã gửi email lead, id:", data?.id);
+  return { ok: true, message: "Cảm ơn bạn! Chúng tôi sẽ liên hệ trong thời gian sớm nhất." };
+}
