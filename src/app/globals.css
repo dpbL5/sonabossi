@@ -662,6 +662,27 @@ a.project-card:hover img {
 .footer-grid > div:not(:first-child) p {
   margin-top: 12px;
 }
+.footer-company {
+  grid-column: span 2;
+  max-width: 360px;
+}
+.footer-company .company-name {
+  color: var(--white);
+  font-weight: 600;
+  line-height: 1.55;
+  margin-top: 0;
+}
+.footer-company p {
+  line-height: 1.7;
+}
+.footer-company strong {
+  color: #e1e8f2;
+  font-weight: 500;
+}
+.footer-company a {
+  display: block;
+  padding-block: 4px;
+}
 .footer-bottom {
   border-top: 1px solid #29436d;
   min-height: 70px;
@@ -1017,6 +1038,9 @@ a.project-card:hover img {
   .footer-grid {
     grid-template-columns: 1.3fr 1fr;
     gap: 40px;
+  }
+  .footer-company {
+    grid-column: auto;
   }
 }
 @media (max-width: 760px) {

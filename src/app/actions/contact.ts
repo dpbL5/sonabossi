@@ -12,7 +12,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // Sandbox resend.dev chỉ giao được tới email tài khoản Resend —
 // sau khi verify domain riêng thì đổi RESEND_CONTACT_FROM/TO trong .env
 const FROM =
-  process.env.RESEND_CONTACT_FROM?.trim() || "Website Sonabossi <onboarding@resend.dev>";
+  process.env.RESEND_CONTACT_FROM?.trim() ||
+  "Sơn ABOSSI Test Email <onboarding@resend.dev>";
 const TO = process.env.RESEND_CONTACT_TO?.trim() || "";
 
 function esc(value: string): string {
@@ -32,7 +33,10 @@ export async function sendContact(
   const email = String(formData.get("email") ?? "").trim();
 
   if (!name || !phone || !email) {
-    return { ok: false, message: "Vui lòng điền họ tên, số điện thoại và email." };
+    return {
+      ok: false,
+      message: "Vui lòng điền họ tên, số điện thoại và email.",
+    };
   }
 
   const payload = {
@@ -41,7 +45,9 @@ export async function sendContact(
     email,
     role: String(formData.get("role") ?? "").trim(),
     region: String(formData.get("region") ?? "").trim(),
-    message: String(formData.get("message") ?? "").trim().slice(0, 2000),
+    message: String(formData.get("message") ?? "")
+      .trim()
+      .slice(0, 2000),
   };
 
   if (!TO) {
@@ -78,7 +84,7 @@ export async function sendContact(
       from: FROM,
       to: TO,
       replyTo: payload.email,
-      subject: `Lead mới: ${payload.name} (${payload.phone})`,
+      subject: `Yêu cầu liên hệ mới: ${payload.name} (${payload.phone})`,
       html,
     },
     { idempotencyKey: `contact-form/${crypto.randomUUID()}` },
@@ -86,9 +92,15 @@ export async function sendContact(
 
   if (error) {
     console.error("Resend gửi mail thất bại:", error.message);
-    return { ok: false, message: "Gửi email thất bại, bạn vui lòng thử lại sau." };
+    return {
+      ok: false,
+      message: "Gửi email thất bại, bạn vui lòng thử lại sau.",
+    };
   }
 
   console.log("Đã gửi email lead, id:", data?.id);
-  return { ok: true, message: "Cảm ơn bạn! Chúng tôi sẽ liên hệ trong thời gian sớm nhất." };
+  return {
+    ok: true,
+    message: "Cảm ơn bạn! Chúng tôi sẽ liên hệ trong thời gian sớm nhất.",
+  };
 }
