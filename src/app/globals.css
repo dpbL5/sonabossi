@@ -1385,6 +1385,9 @@ a.project-card:hover img {
 .paint-image {
   display: block;
   position: relative;
+  width: 100%;
+  padding: 0;
+  cursor: zoom-in;
   background: var(--white);
   border: 1px solid var(--line);
 }
@@ -1444,6 +1447,47 @@ a.project-card:hover img {
 .paint-card .text-link {
   margin-top: auto;
 }
+.packaging-dialog {
+  width: min(900px, calc(100% - 40px));
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+.packaging-dialog::backdrop {
+  background: rgb(0 22 63 / 72%);
+}
+.packaging-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+.packaging-dialog-header h2 {
+  font-size: 20px;
+}
+.packaging-dialog-close {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--navy);
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+}
+.packaging-dialog-close:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+.packaging-dialog img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 144px);
+  object-fit: contain;
+}
 @media (max-width: 1000px) {
   .paint-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1459,6 +1503,11 @@ a.project-card:hover img {
   }
   .paint-group-heading h2 {
     font-size: 27px;
+  }
+  .packaging-dialog {
+    width: calc(100% - 24px);
+    max-height: calc(100dvh - 24px);
+    padding: 16px;
   }
 }
 

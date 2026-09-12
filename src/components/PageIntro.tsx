@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { ReactNode } from "react";
 export default function PageIntro({
   title,
   description,
   name,
 }: {
-  title: string;
+  title: ReactNode;
   description: string;
   name: string;
 }) {

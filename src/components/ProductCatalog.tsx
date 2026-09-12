@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import products from "@/data/products.json";
 import { Arrow } from "./Brand";
 
@@ -15,6 +15,10 @@ const groups = [
 
 export default function ProductCatalog() {
   const [filter, setFilter] = useState("all");
+  const [selectedProduct, setSelectedProduct] = useState<
+    (typeof products)[number] | null
+  >(null);
+  const packagingDialog = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     let frame = 0;
@@ -46,6 +50,14 @@ export default function ProductCatalog() {
       document.removeEventListener("click", onClick);
     };
   }, []);
+
+  useEffect(() => {
+    const dialog = packagingDialog.current;
+    if (!dialog) return;
+
+    if (selectedProduct) dialog.showModal();
+    else if (dialog.open) dialog.close();
+  }, [selectedProduct]);
 
   const visible = products.filter(
     (product) => filter === "all" || product.category === filter,
@@ -97,12 +109,12 @@ export default function ProductCatalog() {
                       id={product.id}
                       key={product.id}
                     >
-                      <a
+                      <button
+                        type="button"
                         className="paint-image"
-                        href={product.image}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Xem ảnh bao bì ${product.name} (mở tab mới)`}
+                        onClick={() => setSelectedProduct(product)}
+                        aria-haspopup="dialog"
+                        aria-label={`Xem ảnh bao bì ${product.name}`}
                       >
                         <Image
                           src={product.image}
@@ -114,7 +126,7 @@ export default function ProductCatalog() {
                         <span className="paint-image-link">
                           Xem bao bì <Arrow diagonal />
                         </span>
-                      </a>
+                      </button>
                       <div className="paint-card-copy">
                         <h3>{product.name}</h3>
                         <p className="paint-code">{product.code}</p>
@@ -136,6 +148,39 @@ export default function ProductCatalog() {
             </section>
           ))}
       </div>
+      <dialog
+        ref={packagingDialog}
+        className="packaging-dialog"
+        aria-labelledby="packaging-dialog-title"
+        onClose={() => setSelectedProduct(null)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setSelectedProduct(null);
+        }}
+      >
+        {selectedProduct && (
+          <>
+            <div className="packaging-dialog-header">
+              <h2 id="packaging-dialog-title">{selectedProduct.name}</h2>
+              <button
+                type="button"
+                className="packaging-dialog-close"
+                onClick={() => setSelectedProduct(null)}
+                aria-label="Đóng xem bao bì"
+              >
+                Đóng
+              </button>
+            </div>
+            <Image
+              src={selectedProduct.image}
+              alt={`${selectedProduct.name} — ${selectedProduct.code} — Sơn ABOSSI`}
+              width={1280}
+              height={1280}
+              sizes="(max-width: 760px) 100vw, 80vw"
+              priority
+            />
+          </>
+        )}
+      </dialog>
     </section>
   );
 }

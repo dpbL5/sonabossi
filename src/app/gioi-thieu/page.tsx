@@ -9,7 +9,13 @@ export default function AboutPage() {
     <>
       <PageIntro
         name="Giới thiệu"
-        title="Cảm hứng Na Uy. Đồng hành cùng công trình Việt."
+        title={
+          <>
+            Sơn <span className="text-red-700">ABOSSI</span>
+            <br />
+            Sơn của người Việt (Công nghệ từ Na-uy)
+          </>
+        }
         description="ABOSSI mang câu chuyện màu sắc đến gần hơn với những người kiến tạo không gian — từ đại lý phân phối đến nhà thầu thi công."
       />
       <section className="section">
