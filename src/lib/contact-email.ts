@@ -197,7 +197,7 @@ a{text-decoration:none;}
             <p style="margin:0 0 8px;${type(13, WHITE, 600)}">CÔNG TY TNHH SX&amp;TM LUYẾN THANH</p>
             <p style="margin:0 0 10px;${type(12, ON_NAVY, 400, 1.7)}">Thương hiệu SƠN ABOSSI · Cầu Xà Kiều, Xã Ứng Thiên, Hà Nội</p>
             <p style="margin:0;${type(12, ON_NAVY, 400, 1.7)}"><a href="tel:+84978566993" style="color:${WHITE};text-decoration:none;">0978 566 993</a> · <a href="https://sonabossi.com/" style="color:${WHITE};text-decoration:none;">Sonabossi.com</a></p>
-            <p style="margin:12px 0 0;${type(11, "#8ea0bd", 400, 1.7)}">Công nghệ Na Uy · Không gian Việt</p>
+            <p style="margin:12px 0 0;${type(11, "#8ea0bd", 400, 1.7)}">Sơn của người Việt. Công nghệ từ Na-uy</p>
           </td>
         </tr>
       </table>

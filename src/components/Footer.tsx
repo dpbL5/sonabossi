@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Sơn ABOSSI.</span>
-          <span>Công nghệ Na Uy · Không gian Việt</span>
+          <span>Sơn của người Việt. Công nghệ từ Na-uy</span>
           <a href="#main">Về đầu trang ↑</a>
         </div>
       </div>
