@@ -28,7 +28,7 @@ export const seoPages = {
 export function pageMetadata(path: keyof typeof seoPages): Metadata {
   const { title, description } = seoPages[path];
   const url = new URL(path, siteUrl);
-  const images = [{ url: new URL('/herobanner2.png', siteUrl).href, width: 2172, height: 724, alt: 'Các nhóm sản phẩm sơn ABOSSI' }];
+  const images = [{ url: new URL('/secBanner.png', siteUrl).href, width: 1859, height: 846, alt: 'Các nhóm sản phẩm sơn ABOSSI' }];
   return {
     title: { absolute: title },
     description,

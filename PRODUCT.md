@@ -18,10 +18,10 @@ Yêu cầu: trang chủ, giới thiệu, sản phẩm, dự án sử dụng sơn
 Logo gốc `public/sonabossi.png`. Nguồn gốc Na Uy theo brief người dùng; logo ghi “Technology of Norway”. Màu cờ Na Uy. Tham chiếu bắt buộc: https://weblium.com/templates/demo/flooring-solutions-website-design-310.
 
 ## Evidence on Hand
-Hai banner `public/herobanner.png`, `public/herobanner2.png` thể hiện sơn nội thất, ngoại thất và chống thấm. Chưa có catalogue kỹ thuật, hồ sơ công trình đã xác minh, chính sách đại lý hoặc thông tin liên hệ được xác nhận. Nội dung xây dựng và số liệu trong giao diện cũ không phù hợp brief mới; không dùng làm bằng chứng thương hiệu.
+Ảnh nền hero trang chủ là `public/images/hero-banner.png`, chuyển từ `public/temp/herobanner.png` do chủ website cung cấp — 5 thùng sơn ABOSSI thật trên sân đá, nền hồ và biệt thự. Slogan “Đẹp mãi với thời gian” và tên pháp nhân `CÔNG TY TNHH SX&TM LUYẾN THANH` lấy từ banner công ty `public/temp/bannercontent.jpg`, khớp địa chỉ Cầu Quảng Nguyên, Quảng Phú Cầu, Ứng Hòa, Hà Nội, hotline 0978 566 993 và website Sonabossi.com. Chưa có catalogue kỹ thuật, hồ sơ công trình đã xác minh hoặc chính sách đại lý. Nội dung xây dựng và số liệu trong giao diện cũ không phù hợp brief mới; không dùng làm bằng chứng thương hiệu.
 
 ## Open Decisions
-Thông số kỹ thuật, hồ sơ dự án, số liên hệ và nơi nhận biểu mẫu cần chủ sở hữu cung cấp. Hình ảnh không gian mẫu phải được ghi là minh họa; không tự gán thành dự án ABOSSI đã thi công.
+Thông số kỹ thuật, hồ sơ dự án và nơi nhận biểu mẫu cần chủ sở hữu cung cấp. Hình ảnh không gian mẫu phải được ghi là minh họa; không tự gán thành dự án ABOSSI đã thi công.
 
 ## Danh mục sản phẩm đã bổ sung
 13 ảnh bao bì do người dùng cung cấp, chuyển từ thư mục temp/Chị Ly sang public/images/products. Tên sản phẩm, tên dòng tiếng Anh và label đọc trực tiếp từ bao bì, lưu tại src/data/products.json cùng tên file nguồn. Phân nhóm: 5 nội thất, 3 ngoại thất, 3 sơn lót (1 nội thất, 2 ngoại thất), 2 chống thấm. Không suy diễn dung tích, giá, định mức hay thời hạn bảo hành.

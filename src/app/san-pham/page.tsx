@@ -21,10 +21,10 @@ export default function ProductsPage() {
       <ProductCatalog />
       <section className="catalog-banner container">
         <Image
-          src="/herobanner2.png"
+          src="/secBanner.png"
           alt="Banner các nhóm sản phẩm sơn ABOSSI"
-          width={2172}
-          height={724}
+          width={1859}
+          height={846}
           sizes="100vw"
         />
       </section>

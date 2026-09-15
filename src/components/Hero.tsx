@@ -6,8 +6,8 @@ export default function Hero() {
     <>
       <section className="hero">
         <Image
-          src="/images/interior.jpg"
-          alt="Không gian phòng khách sáng, tường màu trung tính và vật liệu tự nhiên — ảnh minh họa"
+          src="/images/hero-banner.png"
+          alt="Năm thùng sơn ABOSSI trên sân đá, nền hồ, núi và biệt thự — ảnh thương hiệu"
           fill
           sizes="100vw"
           preload
@@ -16,18 +16,19 @@ export default function Hero() {
         <div className="hero-shade" />
         <div className="container hero-inner">
           <div className="hero-copy">
+            <p className="hero-eyebrow">Công ty TNHH SX & TM Luyến thanh</p>
             <h1>
-              Sắc màu bền đẹp.
+              Sơn ABOSSI.
               <br />
-              Vững bước
-              <br />
-              <span>cùng công trình.</span>
+              <span>Sơn của người Việt</span>
             </h1>
             <p>
               Giải pháp sơn từ công nghệ Na Uy.
               <br />
               Cùng đại lý và nhà thầu kiến tạo những không gian mang dấu ấn
               riêng.
+              <br />
+              Đẹp mãi với thời gian.
             </p>
             <div className="hero-actions">
               <Link className="button button-red" href="/san-pham">

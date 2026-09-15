@@ -1,10 +1,9 @@
-# Ảnh minh họa
+# Ảnh không gian & công trình
 
-Tải ngày 2026-09-07. Những ảnh này không phải bằng chứng công trình sử dụng sơn ABOSSI.
+20 ảnh do người dùng cung cấp, chuyển nguyên bản từ `public/temp/willBeUsed` sang `public/images/du-an`. Những ảnh này không phải bằng chứng công trình sử dụng sơn ABOSSI.
 
-- interior.jpg: https://images.unsplash.com/photo-1600210492486-724fe5c67fb0
-- villa.jpg: https://images.unsplash.com/photo-1600596542815-ffad4c1539a9
-- apartment.jpg: https://images.unsplash.com/photo-1600607687939-ce8a6c25118c
-- architecture.jpg: https://images.unsplash.com/photo-1600607687920-4e2a09cf159d
+Nội dung và alt text từng ảnh nằm trong `src/data/gallery.ts`. Ảnh dùng ở trang Giới thiệu và khối câu chuyện trang chủ: `du-an/nha-pho-duoi-hang-cay.jpg`.
 
-Nguồn: Unsplash. Logo và hai banner trong public/ do người dùng cung cấp.
+Loại bỏ 4 ảnh không dùng được: screenshot điện thoại còn thanh trạng thái, ảnh có watermark TikTok, và poster render còn sidebar UI.
+
+Nguồn: ảnh người dùng cung cấp. Logo và các banner trong `public/` do người dùng cung cấp.

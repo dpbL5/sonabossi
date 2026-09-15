@@ -42,12 +42,12 @@ export default function Footer() {
           </div>
           <div className="footer-company">
             <h2>Thông tin doanh nghiệp</h2>
-            <p className="company-name">CÔNG TY TNHH SX&amp;TM LUYỆN THANH</p>
+            <p className="company-name">CÔNG TY TNHH SX&amp;TM LUYẾN THANH</p>
             <p>
               <strong>Thương hiệu:</strong> SƠN ABOSSI
               <br />
-              <strong>Địa chỉ:</strong> Cầu Quảng Nguyên, Quảng Phú Cầu,
-              Ứng Hòa, Hà Nội
+              <strong>Địa chỉ:</strong> Cầu Xà Kiều, Xã Ứng Thiên,
+              Hà Nội
             </p>
             <a href="tel:+84978566993">Điện thoại: 0978 566 993</a>
             <a href="https://sonabossi.com/" rel="noopener noreferrer">

@@ -7,8 +7,8 @@ export default function About() {
       <div className="container about-grid">
         <div className="about-photo">
           <Image
-            src="/images/architecture.jpg"
-            alt="Kiến trúc với bề mặt sáng và vật liệu gỗ tự nhiên, hình minh họa"
+            src="/images/du-an/nha-pho-duoi-hang-cay.jpg"
+            alt="Nhà phố với mảng xanh và bề mặt sáng"
             fill
             sizes="(max-width: 760px) 100vw, 50vw"
           />

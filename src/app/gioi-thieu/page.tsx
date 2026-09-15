@@ -11,9 +11,10 @@ export default function AboutPage() {
         name="Giới thiệu"
         title={
           <>
-            Sơn <span className="text-red-700">ABOSSI</span>
+            Sơn <span className="text-red-700">ABOSSI</span>. Sơn của người
+            Việt.
             <br />
-            Sơn của người Việt (Công nghệ từ Na-uy)
+            Công nghệ từ Na-uy
           </>
         }
         description="ABOSSI mang câu chuyện màu sắc đến gần hơn với những người kiến tạo không gian — từ đại lý phân phối đến nhà thầu thi công."
@@ -22,8 +23,8 @@ export default function AboutPage() {
         <div className="container story-grid">
           <div className="story-photo">
             <Image
-              src="/images/architecture.jpg"
-              alt="Không gian kiến trúc sáng, ảnh minh họa tinh thần thiết kế"
+              src="/images/du-an/nha-pho-duoi-hang-cay.jpg"
+              alt="Kiến trúc nhà phố với mảng xanh bên mặt tiền"
               fill
               sizes="(max-width: 760px) 100vw, 50vw"
             />
@@ -91,10 +92,10 @@ export default function AboutPage() {
         <div className="container brand-banner">
           <Link href="/san-pham" aria-label="Khám phá sản phẩm ABOSSI">
             <Image
-              src="/herobanner2.png"
+              src="/secBanner.png"
               alt="Banner ABOSSI với các nhóm sơn nội thất, ngoại thất và chống thấm"
-              width={2172}
-              height={724}
+              width={1859}
+              height={846}
               sizes="100vw"
             />
           </Link>

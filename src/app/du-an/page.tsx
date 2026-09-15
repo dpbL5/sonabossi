@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import PageIntro from "@/components/PageIntro";
-import Catalog from "@/components/Catalog";
+import Gallery from "@/components/Gallery";
 import { Arrow } from "@/components/Brand";
 export const metadata = pageMetadata("/du-an");
 export default function ProjectsPage() {
@@ -10,9 +10,16 @@ export default function ProjectsPage() {
       <PageIntro
         name="Dự án"
         title="Từ sắc màu đến không gian."
-        description="Khám phá những không gian truyền cảm hứng và ý tưởng phối màu cho biệt thự, căn hộ và nhà phố."
+        description="Khám phá không gian nhà ở, công trình đang hoàn thiện và hoạt động giao sơn tại công trường."
       />
-      <Catalog kind="projects" />
+      <section className="section">
+        <div className="container">
+          <Gallery />
+          <p className="gallery-note">
+            Hình ảnh công trình và hoạt động do chủ website cung cấp.
+          </p>
+        </div>
+      </section>
       <section className="simple-cta">
         <div className="container">
           <h2>

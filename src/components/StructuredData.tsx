@@ -4,7 +4,7 @@ export default function StructuredData() {
   const data = {
     "@context": "https://schema.org",
     "@type": ["WebSite", "Organization"],
-    name: "CÔNG TY TNHH SX&TM LUYỆN THANH",
+    name: "CÔNG TY TNHH SX&TM LUYẾN THANH",
     alternateName: "SƠN ABOSSI",
     url: siteUrl.href,
     inLanguage: "vi-VN",
@@ -13,8 +13,8 @@ export default function StructuredData() {
     telephone: "+84978566993",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Cầu Quảng Nguyên, Quảng Phú Cầu",
-      addressLocality: "Ứng Hòa",
+      streetAddress: "Cầu Xà Kiều, Xã Ứng Thiên",
+      addressLocality: "Hà Nội",
       addressRegion: "Hà Nội",
       addressCountry: "VN",
     },

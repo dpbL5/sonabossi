@@ -19,7 +19,9 @@ Mở http://localhost:3000. Kiểm tra production: `npm run build`, sau đó `np
 - `src/data/products.json`: 13 sản phẩm, tên dòng, label trên bao bì và ánh xạ tên ảnh gốc.
 - `src/components/ProductCatalog.tsx`: danh mục có bộ lọc 4 nhóm; ảnh bao bì mở được để đọc nhãn.
 - `src/components/Services.tsx`: ba nhóm giải pháp và ảnh sản phẩm đại diện trên trang chủ.
-- `src/components/Projects.tsx`: dữ liệu các không gian minh họa.
+- `src/components/Projects.tsx`: khối gallery 6 ảnh không gian và công trình trên trang chủ.
+- `src/components/Gallery.tsx`: gallery masonry, mỗi ảnh chỉ có alt text.
+- `src/data/gallery.ts`: 20 ảnh kèm kích thước thật và alt text mô tả nội dung.
 - `src/components/Contact.tsx`: chuẩn bị và sao chép nội dung hợp tác trên trình duyệt. Chưa có backend, không gửi hay lưu dữ liệu ra ngoài.
 
 | Route | Nội dung |
@@ -27,13 +29,13 @@ Mở http://localhost:3000. Kiểm tra production: `npm run build`, sau đó `np
 | `/` | Trang chủ |
 | `/gioi-thieu` | Giới thiệu thương hiệu |
 | `/san-pham` | Danh mục sơn, bộ lọc, thông tin ứng dụng |
-| `/du-an` | Không gian tham khảo và bộ lọc loại công trình |
+| `/du-an` | Gallery không gian và công trình |
 
 ## Trước khi đưa vào sử dụng chính thức
 
 Bổ sung catalogue kỹ thuật (quy cách và thông số), hồ sơ công trình thực tế, thông tin liên hệ và kênh nhận yêu cầu hợp tác. Thay dữ liệu minh họa bằng nội dung đã xác minh. Hiện không tự tạo chứng chỉ, chính sách giá hoặc dự án đã thi công.
 
-Logo và banner giữ nguyên từ tài nguyên người dùng. Font Be Vietnam Pro lưu local. Ảnh kiến trúc minh họa từ Unsplash; nguồn ở `public/images/SOURCES.md`. Tham chiếu thiết kế: https://weblium.com/templates/demo/flooring-solutions-website-design-310.
+Logo và banner giữ nguyên từ tài nguyên người dùng. Font Be Vietnam Pro lưu local. Ảnh không gian và công trình do người dùng cung cấp, chuyển từ `public/temp/willBeUsed` vào `public/images/du-an`; nguồn ở `public/images/SOURCES.md`. Tham chiếu thiết kế: https://weblium.com/templates/demo/flooring-solutions-website-design-310.
 
 ## SEO
 

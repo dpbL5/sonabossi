@@ -18,11 +18,12 @@ for (const route of routes) {
   assert.equal(new URL(html.match(/<link rel="canonical" href="([^"]+)"/)?.[1]).href, url, `Canonical: ${route}`);
   assert.equal(new URL(html.match(/<meta property="og:url" content="([^"]+)"/)?.[1]).href, url, `OG URL: ${route}`);
   assert(html.includes('<meta name="twitter:card" content="summary_large_image"'));
-  assert(html.includes(new URL('/herobanner2.png', base).href));
+  assert(html.includes(new URL('/secBanner.png', base).href));
   const json = html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)?.[1];
   assert(json, `Missing structured data: ${route}`);
   const data = JSON.parse(json);
-  assert.equal(data['@type'], 'WebSite');
+  const types = Array.isArray(data['@type']) ? data['@type'] : [data['@type']];
+  assert(types.includes('WebSite'));
   assert.equal(data.url, base.href);
   assert(sitemap.includes(`<loc>${url}</loc>`), `Missing sitemap URL: ${route}`);
 }
