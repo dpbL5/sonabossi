@@ -9,7 +9,48 @@
       "Kháng kiềm"
     ],
     "image": "/images/products/nano-primer-ext.jpg",
-    "sourceFile": "1wupuklkapaadtzrnpm6bozozs7m9mzi1muxin0gtihnibgapet51vbiqonk53qysmj7.jpg"
+    "sourceFile": "1wupuklkapaadtzrnpm6bozozs7m9mzi1muxin0gtihnibgapet51vbiqonk53qysmj7.jpg",
+    "tagline": "Siêu kháng kiềm",
+    "note": "Sản phẩm vượt trội",
+    "summary": "Sơn lót hệ nước cho bề mặt ngoại thất, tạo màng kháng kiềm và tăng độ bám cho lớp phủ màu.",
+    "features": [
+      "Kháng kiềm mạnh trên vữa xi măng mới tô",
+      "Tăng bám dính cho lớp sơn phủ ngoại thất",
+      "Hạn chế loang màu và ố vàng lớp phủ",
+      "Chống nấm mốc trên bề mặt ẩm",
+      "Màng lót mịn, dễ lăn lớp phủ"
+    ],
+    "usage": [
+      "Tường vữa xi măng và bê tông mới tô ngoài trời",
+      "Mặt tiền nhà phố, biệt thự, công trình thương mại",
+      "Bề mặt đã xử lý sạch, phẳng và se khô"
+    ],
+    "specs": [
+      {
+        "label": "Lớp phủ phù hợp",
+        "value": "Sơn phủ ngoại thất ABOSSI"
+      },
+      {
+        "label": "Số lớp",
+        "value": "1 lớp lót"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "10–12 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "nano-super-glossy",
@@ -22,7 +63,48 @@
       "Chống bám bụi"
     ],
     "image": "/images/products/nano-super-glossy.jpg",
-    "sourceFile": "1wupuklkapauht6obo0lw3chxk9snsy7c7rgornpyuahuxnd9fllpe0m2pmcdzzcdha9.jpg"
+    "sourceFile": "1wupuklkapauht6obo0lw3chxk9snsy7c7rgornpyuahuxnd9fllpe0m2pmcdzzcdha9.jpg",
+    "tagline": "Chống bám bụi",
+    "summary": "Sơn phủ ngoại thất màng siêu bóng, cứng mặt và bền màu dưới nắng mưa, bề mặt ít bắt bụi.",
+    "features": [
+      "Màng sơn siêu bóng, lên màu sâu",
+      "Chống bám bụi, dễ rửa trôi khi mưa",
+      "Bền màu ngoài trời",
+      "Chống nấm mốc",
+      "Lau chùi hiệu quả",
+      "Độ phủ cao"
+    ],
+    "usage": [
+      "Mặt tiền, tường ngoài nhà phố và biệt thự",
+      "Hàng rào, cổng, công trình thương mại",
+      "Bề mặt đã sơn lót kháng kiềm ngoại thất"
+    ],
+    "specs": [
+      {
+        "label": "Lớp lót",
+        "value": "NANO PRIMER.EXT hoặc NANO SHIELD.EXT"
+      },
+      {
+        "label": "Số lớp phủ",
+        "value": "2 lớp"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C, sơn lớp kế tiếp sau 2 giờ"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "8–10 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "nano-water-proof-color",
@@ -35,7 +117,47 @@
       "Chống nóng"
     ],
     "image": "/images/products/nano-water-proof-color.jpg",
-    "sourceFile": "1wupuklkapavuul5lyv6gy4g5u6s3er4ukfuvsmwfln8uyivq9zejbijtfyjhbtrok01.jpg"
+    "sourceFile": "1wupuklkapavuul5lyv6gy4g5u6s3er4ukfuvsmwfln8uyivq9zejbijtfyjhbtrok01.jpg",
+    "tagline": "Chống thấm tuyệt đối",
+    "summary": "Sơn chống thấm gốc acrylic tạo màng màu siêu bóng, ngăn nước thấm qua kết cấu và giảm nhiệt bề mặt.",
+    "features": [
+      "Màng chống thấm liền mạch, bám chắc trên bê tông",
+      "Giảm nhiệt bề mặt dưới nắng",
+      "Chống nấm mốc, chống rêu",
+      "Độ phủ cao, màu ổn định",
+      "Màng bóng dễ vệ sinh"
+    ],
+    "usage": [
+      "Mái bê tông, sân thượng, ban công",
+      "Tường ngoài và chân tường thấm ẩm",
+      "Sàn khu vực thường xuyên ẩm ướt"
+    ],
+    "specs": [
+      {
+        "label": "Lớp lót",
+        "value": "NANO PRIMER.EXT trên bề mặt vữa mới"
+      },
+      {
+        "label": "Số lớp phủ",
+        "value": "2 lớp, lăn vuông góc nhau"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "1 giờ ở 25°C, sơn lớp kế tiếp sau 4 giờ"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "8–10 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "nano-water-proof-cement",
@@ -47,7 +169,44 @@
       "Pha xi măng"
     ],
     "image": "/images/products/nano-water-proof-cement.jpg",
-    "sourceFile": "1wupuklkapax9bgfhxfqn0capulspaff0o1qkbw21rj4tmz2rnuskvfspjfdlmjjc3810.jpg"
+    "sourceFile": "1wupuklkapax9bgfhxfqn0capulspaff0o1qkbw21rj4tmz2rnuskvfspjfdlmjjc3810.jpg",
+    "tagline": "Chống thấm vượt trội",
+    "note": "Sản phẩm không mùi",
+    "summary": "Sơn chống thấm gốc polymer pha thêm xi măng, tạo màng dày bám chắc trên kết cấu bê tông và vữa.",
+    "features": [
+      "Chống thấm tối ưu cho kết cấu bê tông, vữa",
+      "Pha xi măng theo hướng dẫn để tăng độ cứng màng",
+      "Giảm nhiệt bề mặt",
+      "Không mùi, thi công được trong nhà",
+      "Bám chắc trên bề mặt còn ẩm"
+    ],
+    "usage": [
+      "Sân thượng, mái, ban công",
+      "Chân tường, hầm, bể kỹ thuật, khu vệ sinh",
+      "Bề mặt bê tông và vữa xi măng còn ẩm"
+    ],
+    "specs": [
+      {
+        "label": "Pha trộn",
+        "value": "Trộn xi măng theo tỉ lệ trên bao bì, khuấy đều trước khi thi công"
+      },
+      {
+        "label": "Số lớp",
+        "value": "2 lớp, lăn vuông góc nhau"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc bàn vét"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "2 giờ ở 25°C, thi công lớp kế tiếp sau 4–6 giờ"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "1–1,2 kg/m² cho 2 lớp"
+      }
+    ]
   },
   {
     "id": "sheen-shield-exterior",
@@ -60,7 +219,48 @@
       "Chống bám bụi"
     ],
     "image": "/images/products/sheen-shield-exterior.jpg",
-    "sourceFile": "1wupuklkapaxllq16q7rkryepzcqfhfz08klxjielawrsfpfos9np4ujtxtimwwqbul8.jpg"
+    "sourceFile": "1wupuklkapaxllq16q7rkryepzcqfhfz08klxjielawrsfpfos9np4ujtxtimwwqbul8.jpg",
+    "tagline": "Ánh ngọc trai",
+    "note": "Sản phẩm không mùi",
+    "summary": "Sơn phủ ngoại thất ánh bóng nhẹ như ngọc trai, màng sơn đều màu và hạn chế bám bụi.",
+    "features": [
+      "Màng sơn bóng nhẹ, ánh ngọc trai",
+      "Chống bám bụi",
+      "Chống nấm mốc",
+      "Lau chùi tối ưu",
+      "Không mùi khi thi công"
+    ],
+    "usage": [
+      "Mặt tiền, tường ngoài nhà phố và biệt thự",
+      "Không gian ngoài trời cần bề mặt bóng nhẹ",
+      "Bề mặt đã sơn lót kháng kiềm ngoại thất"
+    ],
+    "specs": [
+      {
+        "label": "Lớp lót",
+        "value": "NANO PRIMER.EXT hoặc NANO SHIELD.EXT"
+      },
+      {
+        "label": "Số lớp phủ",
+        "value": "2 lớp"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C, sơn lớp kế tiếp sau 2 giờ"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "8–10 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "glossy-interior",
@@ -73,7 +273,47 @@
       "Chống bong tróc"
     ],
     "image": "/images/products/glossy-interior.jpg",
-    "sourceFile": "1wupuklkapaxllq16q7rkrz9rsbpdxylxqllibprhwyftx4nptor9fmiwxlrqzekuet3.jpg"
+    "sourceFile": "1wupuklkapaxllq16q7rkrz9rsbpdxylxqllibprhwyftx4nptor9fmiwxlrqzekuet3.jpg",
+    "tagline": "Chống bong tróc",
+    "summary": "Sơn phủ nội thất màng bóng, bám chắc trên tường và dễ lau chùi trong sinh hoạt hằng ngày.",
+    "features": [
+      "Màng sơn bóng, bề mặt dễ vệ sinh",
+      "Chống bám bụi",
+      "Chống nấm mốc",
+      "Lau chùi tối ưu",
+      "Bám chắc, hạn chế bong tróc"
+    ],
+    "usage": [
+      "Tường nội thất phòng khách, phòng ngủ, hành lang",
+      "Khu vực sinh hoạt cần lau chùi thường xuyên",
+      "Bề mặt đã sơn lót kháng kiềm nội thất"
+    ],
+    "specs": [
+      {
+        "label": "Lớp lót",
+        "value": "NANO SHIELD.INT"
+      },
+      {
+        "label": "Số lớp phủ",
+        "value": "2 lớp"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C, sơn lớp kế tiếp sau 2 giờ"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "9–11 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "super-white-interior",
@@ -85,7 +325,47 @@
       "Siêu trắng sáng"
     ],
     "image": "/images/products/super-white-interior.jpg",
-    "sourceFile": "1wupuklkapaxllq16q7rkrzdcziwbnobrio8ulm2pgp5do8gqwwfi24kthrv6o5chuf4.jpg"
+    "sourceFile": "1wupuklkapaxllq16q7rkrzdcziwbnobrio8ulm2pgp5do8gqwwfi24kthrv6o5chuf4.jpg",
+    "tagline": "Siêu trắng sáng",
+    "summary": "Sơn trắng chuyên cho trần nội thất, độ trắng cao và che phủ tốt trên bề mặt bê tông, thạch cao.",
+    "features": [
+      "Độ trắng cao, giữ sáng cho trần",
+      "Che phủ tốt, hạn chế vệt loang",
+      "Chống nấm mốc",
+      "Lau chùi nhiều lần",
+      "Màng sơn nhẹ, không nặng trần"
+    ],
+    "usage": [
+      "Trần bê tông, trần thạch cao nội thất",
+      "Trần khu vực sinh hoạt, hành lang, cầu thang",
+      "Bề mặt đã sơn lót kháng kiềm nội thất"
+    ],
+    "specs": [
+      {
+        "label": "Lớp lót",
+        "value": "NANO SHIELD.INT"
+      },
+      {
+        "label": "Số lớp phủ",
+        "value": "2 lớp, lăn theo một hướng để tránh vệt"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C, sơn lớp kế tiếp sau 2 giờ"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "10–12 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "nano-shield-ext",
@@ -98,7 +378,48 @@
       "Kháng muối"
     ],
     "image": "/images/products/nano-shield-ext.jpg",
-    "sourceFile": "1wupuklkapaxllq16q7rkrzua0stchgmnm3jenckqjmp1af4dx5b4qzadikuljoygpm6.jpg"
+    "sourceFile": "1wupuklkapaxllq16q7rkrzua0stchgmnm3jenckqjmp1af4dx5b4qzadikuljoygpm6.jpg",
+    "tagline": "Siêu kháng muối",
+    "note": "Sản phẩm vượt trội",
+    "summary": "Sơn lót ngoại thất kháng kiềm kèm kháng muối, dùng cho bề mặt vữa mới và khu vực nhiễm mặn.",
+    "features": [
+      "Kháng kiềm và kháng muối trên vữa xi măng mới",
+      "Hạn chế muối thấm làm bạc màu lớp phủ",
+      "Tăng bám dính cho sơn phủ ngoại thất",
+      "Chống nấm mốc",
+      "Màng lót mịn, dễ thi công"
+    ],
+    "usage": [
+      "Công trình ven biển, khu vực đất nhiễm mặn",
+      "Tường vữa xi măng, bê tông mới tô ngoài trời",
+      "Chân tường và tường tiếp xúc trực tiếp nắng mưa"
+    ],
+    "specs": [
+      {
+        "label": "Lớp phủ phù hợp",
+        "value": "Sơn phủ ngoại thất ABOSSI"
+      },
+      {
+        "label": "Số lớp",
+        "value": "1 lớp lót"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "10–12 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "nano-shield-int",
@@ -111,7 +432,47 @@
       "Chống nấm mốc"
     ],
     "image": "/images/products/nano-shield-int.jpg",
-    "sourceFile": "1wupuklkapaxllq16q7rkrzvb5dfswgd1mew0fzmkt836pcqfl49ydbgjtjcsbjgrt55.jpg"
+    "sourceFile": "1wupuklkapaxllq16q7rkrzvb5dfswgd1mew0fzmkt836pcqfl49ydbgjtjcsbjgrt55.jpg",
+    "tagline": "Chống nẩm mốc",
+    "summary": "Sơn lót nội thất kháng kiềm, giữ lớp phủ lên màu đều và ngăn nấm mốc trên tường.",
+    "features": [
+      "Kháng kiềm trên vữa xi măng mới tô",
+      "Chống nấm mốc, hạn chế ố tường",
+      "Tăng bám dính cho lớp phủ nội thất",
+      "Màng lót mịn, giúp lớp phủ đều màu",
+      "Không mùi khi thi công trong nhà"
+    ],
+    "usage": [
+      "Tường vữa xi măng, bê tông, thạch cao nội thất",
+      "Phòng khách, phòng ngủ, khu vực kín gió",
+      "Bề mặt đã xử lý sạch, phẳng và se khô"
+    ],
+    "specs": [
+      {
+        "label": "Lớp phủ phù hợp",
+        "value": "Sơn phủ nội thất ABOSSI"
+      },
+      {
+        "label": "Số lớp",
+        "value": "1 lớp lót"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "10–12 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "super-glossy-anti-uv",
@@ -124,7 +485,47 @@
       "Lau chùi vượt trội"
     ],
     "image": "/images/products/super-glossy-anti-uv.jpg",
-    "sourceFile": "1wupuklkapaymcuws7jlxv4prszdfshf1suid4jruj5nhsfunfv9rfwumgudriwjml32.jpg"
+    "sourceFile": "1wupuklkapaymcuws7jlxv4prszdfshf1suid4jruj5nhsfunfv9rfwumgudriwjml32.jpg",
+    "tagline": "Lau chùi vượt trội",
+    "summary": "Sơn phủ nội thất màng siêu bóng, bề mặt kín nên lau chùi dễ và hạn chế bám bẩn theo thời gian.",
+    "features": [
+      "Màng sơn siêu bóng, lên màu sâu",
+      "Lau chùi vượt trội, ít để lại vết",
+      "Chống nấm mốc",
+      "Bền màu, hạn chế ngả vàng",
+      "Độ phủ cao"
+    ],
+    "usage": [
+      "Tường nội thất phòng khách, phòng ngủ",
+      "Khu vực cần bề mặt bóng, dễ vệ sinh",
+      "Bề mặt đã sơn lót kháng kiềm nội thất"
+    ],
+    "specs": [
+      {
+        "label": "Lớp lót",
+        "value": "NANO SHIELD.INT"
+      },
+      {
+        "label": "Số lớp phủ",
+        "value": "2 lớp"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C, sơn lớp kế tiếp sau 2 giờ"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "9–11 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "smooth-shield-exterior",
@@ -136,7 +537,47 @@
       "Chống rêu mốc"
     ],
     "image": "/images/products/smooth-shield-exterior.jpg",
-    "sourceFile": "1wupuklkapbfmjigkehl4c9e95szk0ajkmzmfcrh75jzu9wofotrvafj5xzsit7qbwh12.jpg"
+    "sourceFile": "1wupuklkapbfmjigkehl4c9e95szk0ajkmzmfcrh75jzu9wofotrvafj5xzsit7qbwh12.jpg",
+    "tagline": "Chống rêu mốc",
+    "summary": "Sơn phủ ngoại thất màng mịn, bề mặt cứng và hạn chế rêu mốc trong khí hậu ẩm.",
+    "features": [
+      "Màng sơn láng mịn, che phủ tốt",
+      "Chống rêu mốc trên tường ngoài",
+      "Độ cứng màng cao",
+      "Độ phủ cao",
+      "Bền màu dưới nắng mưa"
+    ],
+    "usage": [
+      "Mặt tiền, tường ngoài nhà phố và biệt thự",
+      "Công trình ở khu vực khí hậu ẩm",
+      "Bề mặt đã sơn lót kháng kiềm ngoại thất"
+    ],
+    "specs": [
+      {
+        "label": "Lớp lót",
+        "value": "NANO PRIMER.EXT hoặc NANO SHIELD.EXT"
+      },
+      {
+        "label": "Số lớp phủ",
+        "value": "2 lớp"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C, sơn lớp kế tiếp sau 2 giờ"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "8–10 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "easy-clean-interior",
@@ -147,7 +588,48 @@
       "Lau chùi hiệu quả"
     ],
     "image": "/images/products/easy-clean-interior.jpg",
-    "sourceFile": "1wupuklkapbfmjigkehl4c9ljtdhb29hesbcag2ndkle7smwzmsinbqspyrfpdlj3tp13.jpg"
+    "sourceFile": "1wupuklkapbfmjigkehl4c9ljtdhb29hesbcag2ndkle7smwzmsinbqspyrfpdlj3tp13.jpg",
+    "tagline": "Lau chùi tối đa",
+    "note": "Sản phẩm không mùi",
+    "summary": "Sơn nội thất màng mịn cho khu vực sinh hoạt đông người, lau chùi nhiều lần vẫn giữ bề mặt.",
+    "features": [
+      "Lau chùi tối đa, chịu vệ sinh thường xuyên",
+      "Hạn chế bám bẩn và vệt tay",
+      "Không mùi khi thi công",
+      "Chống nấm mốc",
+      "Độ phủ cao"
+    ],
+    "usage": [
+      "Phòng khách, hành lang, cầu thang",
+      "Khu vực sinh hoạt đông người, nhà có trẻ nhỏ",
+      "Bề mặt đã sơn lót kháng kiềm nội thất"
+    ],
+    "specs": [
+      {
+        "label": "Lớp lót",
+        "value": "NANO SHIELD.INT"
+      },
+      {
+        "label": "Số lớp phủ",
+        "value": "2 lớp"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C, sơn lớp kế tiếp sau 2 giờ"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "10–12 m²/lít/lớp"
+      }
+    ]
   },
   {
     "id": "smooth-interior",
@@ -159,6 +641,47 @@
       "Độ phủ cao"
     ],
     "image": "/images/products/smooth-interior.jpg",
-    "sourceFile": "1wupuklkapbfmjigkehl4c9yxyl9el5hqwilnjaapj7weoazmemrao8py7hnjivtof011.jpg"
+    "sourceFile": "1wupuklkapbfmjigkehl4c9yxyl9el5hqwilnjaapj7weoazmemrao8py7hnjivtof011.jpg",
+    "tagline": "Độ phủ cao",
+    "note": "Sản phẩm không mùi",
+    "summary": "Sơn phủ nội thất màng mịn, che phủ tốt cho tường và trần trong nhà ở, văn phòng.",
+    "features": [
+      "Màng sơn láng mịn, lên màu đều",
+      "Độ phủ cao",
+      "Chống bong tróc",
+      "Chống rêu mốc",
+      "Không mùi khi thi công"
+    ],
+    "usage": [
+      "Tường và trần nội thất nhà ở, văn phòng",
+      "Phòng khách, phòng ngủ, khu vực khô",
+      "Bề mặt đã sơn lót kháng kiềm nội thất"
+    ],
+    "specs": [
+      {
+        "label": "Lớp lót",
+        "value": "NANO SHIELD.INT"
+      },
+      {
+        "label": "Số lớp phủ",
+        "value": "2 lớp"
+      },
+      {
+        "label": "Dụng cụ",
+        "value": "Rulo, cọ hoặc máy phun"
+      },
+      {
+        "label": "Pha loãng",
+        "value": "Nước sạch, tối đa 10% theo thể tích"
+      },
+      {
+        "label": "Khô bề mặt",
+        "value": "30 phút ở 25°C, sơn lớp kế tiếp sau 2 giờ"
+      },
+      {
+        "label": "Định mức tham khảo",
+        "value": "10–12 m²/lít/lớp"
+      }
+    ]
   }
 ]

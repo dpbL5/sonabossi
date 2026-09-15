@@ -1415,6 +1415,7 @@ svg {
   background: var(--white);
   border: 1px solid var(--line);
   color: var(--ink);
+  overflow: auto;
 }
 .packaging-dialog::backdrop {
   background: rgb(0 22 63 / 72%);
@@ -1429,6 +1430,12 @@ svg {
 .packaging-dialog-header h2 {
   font-size: 22px;
 }
+.packaging-dialog-code {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
 .packaging-dialog-close {
   min-height: 44px;
   padding: 8px 12px;
@@ -1441,12 +1448,127 @@ svg {
   background: var(--navy);
   color: var(--white);
 }
-.packaging-dialog img {
+.packaging-dialog-body {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  align-items: stretch;
+}
+.packaging-dialog-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+.packaging-dialog-media img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: calc(100dvh - 144px);
+  max-height: calc(100dvh - 180px);
   object-fit: contain;
+}
+.packaging-dialog-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: calc(100dvh - 180px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+.packaging-flags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.packaging-flag {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 12px;
+  padding: 4px 9px;
+  border-radius: var(--radius);
+}
+.packaging-flags-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+.packaging-summary {
+  font-size: 16px;
+}
+.packaging-info-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 6px;
+}
+.packaging-features,
+.packaging-usage {
+  display: grid;
+  gap: 7px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.packaging-features li,
+.packaging-usage li {
+  position: relative;
+  padding-left: 17px;
+  font-size: 15px;
+}
+.packaging-features li::before,
+.packaging-usage li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 8px;
+  height: 1px;
+}
+.packaging-features li::before {
+  background: var(--red);
+}
+.packaging-usage li::before {
+  background: var(--navy);
+}
+.packaging-specs {
+  margin: 0;
+}
+.packaging-specs > div {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.8fr) 1.2fr;
+  gap: 14px;
+  padding: 9px 0;
+  border-top: 1px solid var(--line);
+}
+.packaging-specs dt {
+  font-size: 13px;
+  color: var(--muted);
+}
+.packaging-specs dd {
+  margin: 0;
+  font-size: 15px;
+}
+.packaging-footnote {
+  font-size: 13px;
+  color: var(--muted);
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 900px) {
+  .packaging-dialog-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .packaging-dialog-media img {
+    max-height: none;
+  }
+  .packaging-dialog-info {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
 }
 @media (max-width: 1000px) {
   .paint-grid {

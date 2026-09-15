@@ -1,6 +1,8 @@
 "use server";
 
 import { Resend } from "resend";
+import { buildContactEmail } from "@/lib/contact-email";
+import { siteUrl } from "@/lib/seo";
 
 export type ContactFormState = {
   ok: boolean;
@@ -15,14 +17,6 @@ const FROM =
   process.env.RESEND_CONTACT_FROM?.trim() ||
   "Sơn ABOSSI Test Email <onboarding@resend.dev>";
 const TO = process.env.RESEND_CONTACT_TO?.trim() || "";
-
-function esc(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
 
 export async function sendContact(
   _prev: ContactFormState,
@@ -55,37 +49,19 @@ export async function sendContact(
     return { ok: false, message: "Hệ thống đang bận, vui lòng thử lại sau." };
   }
 
-  const rows = [
-    ["Họ và tên", payload.name],
-    ["Số điện thoại", payload.phone],
-    ["Email", payload.email],
-    ["Bạn là", payload.role],
-    ["Khu vực", payload.region],
-    ["Nhu cầu", payload.message],
-  ] as const;
-
-  const html = `
-    <div style="font-family:Arial,sans-serif;font-size:14px;color:#111">
-      <h2 style="margin:0 0 16px">Lead mới từ landing page Sonabossi</h2>
-      <table cellpadding="8" cellspacing="0" style="border-collapse:collapse">
-        ${rows
-          .filter(([, value]) => value)
-          .map(
-            ([label, value]) =>
-              `<tr><td style="border:1px solid #ddd;font-weight:bold;vertical-align:top">${label}</td><td style="border:1px solid #ddd;white-space:pre-wrap">${esc(value)}</td></tr>`,
-          )
-          .join("")}
-      </table>
-      <p style="color:#666;margin-top:16px">Reply email này để trả lời trực tiếp cho khách.</p>
-    </div>`;
+  const { subject, html, text } = buildContactEmail(payload, {
+    siteUrl,
+    receivedAt: new Date(),
+  });
 
   const { data, error } = await resend.emails.send(
     {
       from: FROM,
       to: TO,
       replyTo: payload.email,
-      subject: `Yêu cầu liên hệ mới: ${payload.name} (${payload.phone})`,
+      subject,
       html,
+      text,
     },
     { idempotencyKey: `contact-form/${crypto.randomUUID()}` },
   );

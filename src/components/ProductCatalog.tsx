@@ -160,7 +160,10 @@ export default function ProductCatalog() {
         {selectedProduct && (
           <>
             <div className="packaging-dialog-header">
-              <h2 id="packaging-dialog-title">{selectedProduct.name}</h2>
+              <div>
+                <h2 id="packaging-dialog-title">{selectedProduct.name}</h2>
+                <p className="packaging-dialog-code">{selectedProduct.code}</p>
+              </div>
               <button
                 type="button"
                 className="packaging-dialog-close"
@@ -170,14 +173,56 @@ export default function ProductCatalog() {
                 Đóng
               </button>
             </div>
-            <Image
-              src={selectedProduct.image}
-              alt={`${selectedProduct.name} — ${selectedProduct.code} — Sơn ABOSSI`}
-              width={1280}
-              height={1280}
-              sizes="(max-width: 760px) 100vw, 80vw"
-              priority
-            />
+            <div className="packaging-dialog-body">
+              <div className="packaging-dialog-media">
+                <Image
+                  src={selectedProduct.image}
+                  alt={`${selectedProduct.name} — ${selectedProduct.code} — Sơn ABOSSI`}
+                  width={1280}
+                  height={1280}
+                  sizes="(max-width: 900px) 100vw, 45vw"
+                  priority
+                />
+              </div>
+              <div className="packaging-dialog-info">
+                <div className="packaging-flags">
+                  <span className="packaging-flag">
+                    {selectedProduct.tagline}
+                  </span>
+                  {selectedProduct.note && (
+                    <span className="packaging-flags-note">
+                      {selectedProduct.note}
+                    </span>
+                  )}
+                </div>
+                <p className="packaging-summary">{selectedProduct.summary}</p>
+                <h3 className="packaging-info-title">Đặc tính nổi bật</h3>
+                <ul className="packaging-features">
+                  {selectedProduct.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+                <h3 className="packaging-info-title">Ứng dụng</h3>
+                <ul className="packaging-usage">
+                  {selectedProduct.usage.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                <h3 className="packaging-info-title">Khuyến nghị thi công</h3>
+                <dl className="packaging-specs">
+                  {selectedProduct.specs.map((spec) => (
+                    <div key={spec.label}>
+                      <dt>{spec.label}</dt>
+                      <dd>{spec.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="packaging-footnote">
+                  Bảo hành 10 năm · Không APEO, không kim loại nặng, không
+                  formaldehyde, hàm lượng VOC thấp
+                </p>
+              </div>
+            </div>
           </>
         )}
       </dialog>

@@ -285,9 +285,13 @@ Không có caption dưới ảnh: gallery chỉ hiển thị ảnh, không tiêu
 - **Mobile:** menu xuất hiện ở ≤900px, header còn 76px (72px ở ≤760px). Mỗi mục là hàng 52px viền dưới 1px, đóng bằng Escape hoặc khi chọn liên kết.
 - **Footer:** nền Midnight Navy, chữ 13px pha navy nhạt, logo trên khối trắng; lưới 4 cột → 2 cột ở ≤900px.
 
-### Dialog bao bì (signature)
+### Dialog bao bì kèm đặc tả sản phẩm (signature)
 
-`<dialog>` native mở bằng `showModal()`, không tự vẽ overlay. Khung `min(900px, 100% - 40px)`, padding 20px, nền trắng, viền 1px, backdrop `rgb(0 22 63 / 72%)`. Đầu dialog là tên sản phẩm (21px) và nút Đóng 44px viền navy đảo màu khi hover; ảnh bao bì dưới đó dùng `object-fit: contain` với `max-height: calc(100dvh - 144px)` để luôn thấy trọn nhãn. Bấm ra ngoài khung hoặc đóng dialog đều xoá lựa chọn.
+`<dialog>` native mở bằng `showModal()`, không tự vẽ overlay. Khung `min(900px, 100% - 40px)`, padding 20px, nền trắng, viền 1px, backdrop `rgb(0 22 63 / 72%)`. Đầu dialog là tên sản phẩm (22px) cùng tên dòng 13px Quiet Slate ở dưới, và nút Đóng 44px viền navy đảo màu khi hover.
+
+Thân dialog là lưới hai cột `1.05fr / 0.95fr`, gap 28px, `align-items: stretch`. Cột trái là panel viền 1px Pale Line, padding 12px, ảnh bao bì căn giữa và dùng `object-fit: contain` để luôn thấy trọn nhãn. Cột phải là bản đặc tả, cuộn dọc khi tràn (`max-height: calc(100dvh - 180px)`), gồm: chip navy mang huy hiệu in trên bao bì (ví dụ "Chống bong tróc") kèm dòng lưu ý 13px ("Sản phẩm không mùi"); đoạn mô tả 16px; và ba khối tiêu đề 13px/600 navy — **Đặc tính nổi bật** (gạch đầu dòng 8px màu đỏ), **Ứng dụng** (gạch đầu dòng navy), **Khuyến nghị thi công** (bảng `dl` hai cột `minmax(104px, 0.8fr) / 1.2fr`, đường 1px giữa các hàng: lớp lót, số lớp, dụng cụ, pha loãng, khô bề mặt, định mức tham khảo). Cuối cột là dòng 13px Quiet Slate nêu bảo hành 10 năm và tiêu chí môi trường in trên bao bì (ECO: không APEO, không kim loại nặng, không formaldehyde, VOC thấp).
+
+Nội dung lấy từ `src/data/products.json` qua các trường `tagline`, `note`, `summary`, `features`, `usage`, `specs`. Ở ≤900px dialog về một cột — ảnh trên, đặc tả dưới — và chính dialog cuộn thay cho cột phải. Bấm ra ngoài khung hoặc đóng dialog đều xoá lựa chọn.
 
 ### Bảng màu tham khảo (ColorPicker)
 
@@ -297,11 +301,17 @@ Không có caption dưới ảnh: gallery chỉ hiển thị ảnh, không tiêu
 
 Panel trắng đặt trên nền navy, padding 36px → 26px ở ≤900px → 24px 20px ở ≤760px. Sáu field trong lưới hai cột (`span-full` cho email và nhu cầu): họ tên, số điện thoại, email, bạn là, khu vực, nhu cầu. Nút submit là primary full-width, `justify-content: space-between`, hiển thị "Đang gửi..." khi pending. Kết quả là `role="status"` 13px bên dưới form, rỗng thì không chiếm chỗ. Form gửi qua Server Action (`useActionState`) và Resend; lỗi trả về câu thông báo tiếng Việt nêu đúng việc cần làm.
 
+### Email thông báo lead (Resend)
+
+Dựng trong `src/lib/contact-email.ts` và gửi từ Server Action. Khổ 600px, nền Cool Paper, thẻ trắng viền 1px Pale Line, không bo góc và không đổ bóng. Đầu thư là dải navy chứa logo trên nền trắng (ảnh 200×67 lấy từ `public/images/email/logo-sonabossi.png`, bản rút gọn của logo gốc) và dải ba màu cờ Na Uy cao 6/3/3px (đỏ, trắng, navy). Khối tiêu đề gồm nhãn 13px Quiet Slate "Yêu cầu liên hệ mới", tên khách 26px navy, dòng meta "vai trò · khu vực" 15px Quiet Slate. Hai hành động đứng cạnh nhau: nút đỏ "Gọi {số}" (`tel:`) và nút viền navy "Trả lời email" (`mailto:`) — đỏ chỉ dành cho hành động chính. Bảng thông tin liên hệ lặp lại đúng kiểu bảng đặc tả trong dialog bao bì: nhãn 13px Quiet Slate, giá trị 15px Slate Ink, đường 1px Pale Line giữa các hàng. Nhu cầu khách ghi nằm trong panel Cool Paper viền trái 3px navy và giữ nguyên xuống dòng; không có nhu cầu thì bỏ hẳn panel. Cuối thư là footer navy đậm chứa pháp nhân, địa chỉ, hotline và website. Kèm bản text thuần cho client không dựng HTML.
+
+Ở ≤600px thư về một cột và hai nút xếp dọc full-width. Font brand Be Vietnam Pro nhúng bằng `@font-face` trỏ về `public/fonts/`; client không hỗ trợ sẽ rơi về font hệ thống, nên mọi khối chữ phải đọc được với cả hai. Ảnh chỉ có logo, luôn kèm alt; không dùng ảnh banner vì client chặn ảnh theo mặc định.
+
 ### Bốn trang đã triển khai
 
 1. `/`: hero công trình + CTA hợp tác; nhóm sơn; câu chuyện nguồn gốc; gallery 6 ảnh không gian và công trình; khối hợp tác.
 2. `/gioi-thieu`: thương hiệu, nguồn gốc công nghệ Na Uy theo logo, cách tiếp cận giải pháp cho đại lý/nhà thầu.
-3. `/san-pham`: bảng màu tham khảo; danh mục nội thất, ngoại thất, sơn lót, chống thấm; bộ lọc, dialog bao bì; CTA tư vấn.
+3. `/san-pham`: bảng màu tham khảo; danh mục nội thất, ngoại thất, sơn lót, chống thấm; bộ lọc, dialog bao bì kèm đặc tả và khuyến nghị thi công; CTA tư vấn.
 4. `/du-an`: gallery masonry 20 ảnh không gian và công trình, chỉ hiển thị ảnh kèm alt text mô tả; ghi rõ ảnh do chủ website cung cấp, chưa phải hồ sơ dự án đã xác minh.
 
 ### Tương tác và accessibility

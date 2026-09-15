@@ -6,4 +6,4 @@ Nội dung và alt text từng ảnh nằm trong `src/data/gallery.ts`. Ảnh d�
 
 Loại bỏ 4 ảnh không dùng được: screenshot điện thoại còn thanh trạng thái, ảnh có watermark TikTok, và poster render còn sidebar UI.
 
-Nguồn: ảnh người dùng cung cấp. Logo và các banner trong `public/` do người dùng cung cấp.
+Nguồn: ảnh người dùng cung cấp. Logo và các banner trong `public/` do người dùng cung cấp. `public/images/email/logo-sonabossi.png` là bản rút gọn 480×160 của `public/sonabossi.png`, tạo riêng cho email thông báo lead.
