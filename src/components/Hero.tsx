@@ -5,41 +5,16 @@ export default function Hero() {
   return (
     <>
       <section className="hero">
+        <h1 className="sr-only">Sơn ABOSSI — Sơn của người Việt</h1>
         <Image
           src="/images/hero-banner.png"
-          alt="Năm thùng sơn ABOSSI trên sân đá, nền hồ, núi và biệt thự — ảnh thương hiệu"
-          fill
+          alt="Sáu thùng sơn ABOSSI nội thất, ngoại thất và chống thấm trên banner đỏ trắng có logo, pháp nhân và slogan thương hiệu"
+          width={1774}
+          height={887}
           sizes="100vw"
           preload
           className="hero-photo"
         />
-        <div className="hero-shade" />
-        <div className="container hero-inner">
-          <div className="hero-copy">
-            <p className="hero-eyebrow">Công ty TNHH SX & TM Luyến thanh</p>
-            <h1>
-              Sơn ABOSSI.
-              <br />
-              <span>Sơn của người Việt</span>
-            </h1>
-            <p>
-              Giải pháp sơn từ công nghệ Na Uy.
-              <br />
-              Cùng đại lý và nhà thầu kiến tạo những không gian mang dấu ấn
-              riêng.
-              <br />
-              Đẹp mãi với thời gian.
-            </p>
-            <div className="hero-actions">
-              <Link className="button button-red" href="/san-pham">
-                Khám phá sản phẩm <Arrow />
-              </Link>
-              <Link className="text-link" href="/gioi-thieu">
-                Câu chuyện ABOSSI <Arrow diagonal />
-              </Link>
-            </div>
-          </div>
-        </div>
       </section>
       <div className="solution-strip">
         <div className="container strip-inner">

@@ -177,11 +177,11 @@ Bảng màu lấy trực tiếp từ cờ Na Uy — đỏ và navy trên nền t
 
 ### Hierarchy
 
-- **Display** (600, `clamp(42px, 5.1vw, 74px)` / 1.16, tracking -0.035em): H1 hero trang chủ. Ở ≤1100px cố định 60px, ≤760px `clamp(39px, 8.2vw, 60px)`, ≤380px 37px.
+- **Display** (600, `clamp(42px, 5.1vw, 74px)` / 1.16, tracking -0.035em): cỡ H1 mặc định. Hero trang chủ giờ là ảnh banner đã in sẵn logo, pháp nhân và tên thương hiệu, nên H1 của hero chỉ tồn tại ở dạng ẩn cho SEO — Display không còn xuất hiện trên giao diện; không hạ nó xuống dùng như tiêu đề phụ.
 - **Headline** (600, `clamp(38px, 4.2vw, 60px)` / 1.16, tracking -0.035em): H1 của ba trang con; ≤760px cố định 39px.
 - **Title lg** (600, `clamp(30px, 3.1vw, 44px)` / 1.3, tracking -0.03em): H2 section toàn site; khối hợp tác dùng `clamp(34px, 3.6vw, 50px)` và 38px trên mobile. Tiêu đề thẻ và panel (bài viết sản phẩm, panel form, dialog bao bì) nằm trong khoảng 21–24px và không theo thang clamp.
 - **Title** (600, 24px / 1.4, tracking -0.025em): H3 mặc định — tên nhóm sơn, tiêu đề nguyên tắc, tên thẻ danh mục.
-- **Body** (400, 16px / 1.7, tối đa 70ch): nội dung chính. Đoạn dẫn (hero, mở đầu trang con, dải giải pháp) dùng 17px / 1.8; mô tả và thẻ 14–15px.
+- **Body** (400, 16px / 1.7, tối đa 70ch): nội dung chính. Đoạn dẫn (mở đầu trang con, dải giải pháp) dùng 17px / 1.8; mô tả và thẻ 14–15px.
 - **Label** (500–600, 13px): label form, breadcrumb, meta thẻ, footer. Sau đó là các bậc nhỏ hơn cho topbar, chip bao bì, chú thích ảnh: 10–12px.
 
 Thang nội dung rời rạc, đặt tên theo mục đích trong `typography.scale`: micro 10 · caption 11 · meta 12 · label 13 · control 14 · body-sm 15 · body 16 · lead 17 · emphasis 18. Control (button, navigation, filter, field) đứng ở 14px — một bậc trên label để tay và mắt tách được vùng bấm khỏi văn bản.
@@ -202,13 +202,13 @@ Container tối đa 1240px; gutter mỗi bên 48px, giảm xuống 32px ở ≤1
 - Danh mục `/san-pham`: các hàng ảnh/nội dung 1:1, gap 64px (40px ở ≤1100px), chuyển 1 cột gap 24px ở ≤760px. Lưới sản phẩm 3 cột, 2 cột ở ≤1000px, 1 cột ở ≤600px.
 - Dự án trang chủ: gallery masonry 3 cột, gap 32px; `/du-an` hiển thị toàn bộ ảnh, trang chủ hiển thị 6 ảnh đầu. Cả hai chuyển 2 cột ở ≤1000px và 1 cột ở ≤700px.
 - Header desktop cao 92px. Menu mobile xuất hiện ở ≤900px, header cao 76px; ≤760px còn 72px. Topbar cao 36px, mobile 32px.
-- Hero cao tối thiểu 610px, 580px ở ≤1100px, 690px ở ≥1600px; mobile dùng chiều cao nội dung và 250px vùng ảnh dưới.
+- Hero là ảnh banner full-bleed hiển thị trọn theo tỉ lệ gốc (1774×887); ảnh đã in sẵn logo, pháp nhân và tên thương hiệu nên không có khối chữ HTML, chỉ còn H1 ẩn cho SEO.
 - Form 2 cột; ở ≤900px chuyển 1 cột trong panel cạnh copy; ≤760px panel nằm dưới copy, các field trở lại 2 cột; ≤380px còn 1 cột. Footer 4 → 2 cột ở ≤900px; ≤760px phần thương hiệu chiếm cả hàng; ≤380px còn 1 cột.
 - Bảng màu tham khảo: hai cột 1.2:1, gap 48px; chuyển một cột ở ≤900px, lưới swatch 4 → 3 cột ở ≤480px.
 
 ## Elevation & Depth
 
-Hệ thống này **không có shadow**. Không có shadow ở bất kỳ trạng thái nào — kể cả hover, focus hay dialog. Độ sâu được tạo bằng ba thứ khác: đổi nền (Pure White → Cool Paper → Deep Flag Navy → Midnight Navy), đường viền 1px Pale Line, và ảnh lớn phủ mảng màu. Plaque Na Uy trên trang giới thiệu nổi lên bằng nền navy đặc chồng lên ảnh, không bằng bóng đổ. Hero dùng lớp gradient sáng để giữ độ đọc của chữ trên ảnh, không dùng như trang trí độc lập.
+Hệ thống này **không có shadow**. Không có shadow ở bất kỳ trạng thái nào — kể cả hover, focus hay dialog. Độ sâu được tạo bằng ba thứ khác: đổi nền (Pure White → Cool Paper → Deep Flag Navy → Midnight Navy), đường viền 1px Pale Line, và ảnh lớn phủ mảng màu. Plaque Na Uy trên trang giới thiệu nổi lên bằng nền navy đặc chồng lên ảnh, không bằng bóng đổ. Hero giờ là một ảnh banner full-bleed duy nhất — không lớp phủ, không dải ảnh riêng, toàn bộ thông tin thương hiệu đã in trên ảnh.
 
 ### Named Rules
 
@@ -260,9 +260,9 @@ Hai loại chip, cùng ngôn ngữ hình dạng nhưng khác vai trò.
 
 ### Product Card (danh mục sơn)
 
-- Ảnh là một `<button>` mở dialog, có nút phủ chữ "Xem bao bì" kèm mũi tên chéo (11–12px), hover chuyển sang đỏ; `aria-haspopup="dialog"`.
-- Tên sản phẩm dùng h3 21px / 1.5; tên dòng (`paint-code`) 12px Quiet Slate, `overflow-wrap: anywhere`.
-- Chip đặc tính nằm giữa, cuối thẻ là text-link; `margin-top: auto` giữ hàng link thẳng đáy giữa các thẻ cao thấp khác nhau.
+- Ảnh là liên kết sang trang chi tiết sản phẩm, có nút phủ chữ "Xem chi tiết" kèm mũi tên chéo (11–12px), hover chuyển sang đỏ.
+- Tên sản phẩm dùng h3 21px / 1.5 và cũng là liên kết sang trang chi tiết; tên dòng (`paint-code`) 12px Quiet Slate, `overflow-wrap: anywhere`.
+- Chip đặc tính nằm giữa, cuối thẻ là text-link "Xem chi tiết sản phẩm"; `margin-top: auto` giữ hàng link thẳng đáy giữa các thẻ cao thấp khác nhau.
 - Anchored group `scroll-margin-top: 120px`; nhóm giữ id cũ và có thêm `son-lot`.
 
 ### Gallery công trình
@@ -285,13 +285,24 @@ Không có caption dưới ảnh: gallery chỉ hiển thị ảnh, không tiêu
 - **Mobile:** menu xuất hiện ở ≤900px, header còn 76px (72px ở ≤760px). Mỗi mục là hàng 52px viền dưới 1px, đóng bằng Escape hoặc khi chọn liên kết.
 - **Footer:** nền Midnight Navy, chữ 13px pha navy nhạt, logo trên khối trắng; lưới 4 cột → 2 cột ở ≤900px.
 
-### Dialog bao bì kèm đặc tả sản phẩm (signature)
+### Trang chi tiết sản phẩm (signature)
 
-`<dialog>` native mở bằng `showModal()`, không tự vẽ overlay. Khung `min(900px, 100% - 40px)`, padding 20px, nền trắng, viền 1px, backdrop `rgb(0 22 63 / 72%)`. Đầu dialog là tên sản phẩm (22px) cùng tên dòng 13px Quiet Slate ở dưới, và nút Đóng 44px viền navy đảo màu khi hover.
+Mỗi sản phẩm có một trang riêng tại `/san-pham/[slug]`, sinh tĩnh từ `src/data/products.json` bằng `generateStaticParams`; slug không tồn tại trả 404 (`dynamicParams = false`). Trang này thay cho dialog bao bì cũ — thẻ sản phẩm ở danh mục giờ dẫn thẳng vào đây.
 
-Thân dialog là lưới hai cột `1.05fr / 0.95fr`, gap 28px, `align-items: stretch`. Cột trái là panel viền 1px Pale Line, padding 12px, ảnh bao bì căn giữa và dùng `object-fit: contain` để luôn thấy trọn nhãn. Cột phải là bản đặc tả, cuộn dọc khi tràn (`max-height: calc(100dvh - 180px)`), gồm: chip navy mang huy hiệu in trên bao bì (ví dụ "Chống bong tróc") kèm dòng lưu ý 13px ("Sản phẩm không mùi"); đoạn mô tả 16px; và ba khối tiêu đề 13px/600 navy — **Đặc tính nổi bật** (gạch đầu dòng 8px màu đỏ), **Ứng dụng** (gạch đầu dòng navy), **Khuyến nghị thi công** (bảng `dl` hai cột `minmax(104px, 0.8fr) / 1.2fr`, đường 1px giữa các hàng: lớp lót, số lớp, dụng cụ, pha loãng, khô bề mặt, định mức tham khảo). Cuối cột là dòng 13px Quiet Slate nêu bảo hành 10 năm và tiêu chí môi trường in trên bao bì (ECO: không APEO, không kim loại nặng, không formaldehyde, VOC thấp).
+Khối mở đầu dùng lại nền Cool Paper của `page-intro` và thêm lưới hai cột `0.9fr / 1.1fr`, gap 48px. Cột trái là panel viền 1px Pale Line padding 12px, ảnh bao bì vuông 1:1 `object-fit: contain`. Cột phải xếp dọc: chip navy mang huy hiệu in trên bao bì kèm dòng lưu ý 13px Quiet Slate; H1 tên sản phẩm `clamp(30px, 3.1vw, 44px)`; tên dòng 13px Quiet Slate; đoạn mô tả 17px Quiet Slate; chip đặc tính nền Pure White viền Pale Line; nút đỏ "Trao đổi về sản phẩm" dẫn tới `/#hop-tac`.
 
-Nội dung lấy từ `src/data/products.json` qua các trường `tagline`, `note`, `summary`, `features`, `usage`, `specs`. Ở ≤900px dialog về một cột — ảnh trên, đặc tả dưới — và chính dialog cuộn thay cho cột phải. Bấm ra ngoài khung hoặc đóng dialog đều xoá lựa chọn.
+Thân trang là lưới hai cột `1fr 1fr`, gap 48px 56px, mỗi khối ngăn bằng đường kẻ 1px phía trên tiêu đề 24px. Thứ tự khối theo trang tham khảo:
+
+- **Đặc tính nổi bật** — gạch đầu dòng màu đỏ.
+- **Ứng dụng** — gạch đầu dòng navy.
+- **Thành phần cấu tạo** — chỉ hiện khi sản phẩm có trường `composition`.
+- **Điều kiện thi công** — bảng `dl` hai cột `minmax(104px, 0.8fr) / 1.2fr`; hàng đầu bỏ đường kẻ.
+- **Chỉ tiêu kỹ thuật** — chỉ hiện khi sản phẩm có trường `criteria`; bảng ba cột Chỉ tiêu / Đơn vị / Kết quả, cột đầu là `th scope="row"`, cột số liệu `nowrap`, chiếm cả hai cột lưới.
+- **Thông tin an toàn – bảo quản** — gạch đầu dòng navy, chiếm cả hai cột và giới hạn 88ch, kèm dòng ghi chú 14px Quiet Slate về bảo hành và tiêu chí môi trường.
+
+Cuối trang là dải Cool Paper "Cùng nhóm …" dùng lại đúng `.paint-grid` và `.paint-card` của danh mục (tối đa ba sản phẩm cùng `category`), rồi `simple-cta` navy. Trang tự phát JSON-LD `Product` và metadata riêng qua `productMetadata()` trong `src/lib/seo.ts` (canonical, OG image là chính ảnh bao bì); `sitemap.ts` liệt kê cả URL sản phẩm. Thẻ sản phẩm trong danh mục là component dùng chung `ProductCard`, cả ảnh và text-link đều trỏ về trang chi tiết.
+
+Ở ≤900px lưới mở đầu về một cột và panel ảnh giới hạn 420px; ở ≤760px thân trang về một cột và bảng điều kiện thi công xếp nhãn trên giá trị.
 
 ### Bảng màu tham khảo (ColorPicker)
 
@@ -307,12 +318,13 @@ Dựng trong `src/lib/contact-email.ts` và gửi từ Server Action. Khổ 600p
 
 Ở ≤600px thư về một cột và hai nút xếp dọc full-width. Font brand Be Vietnam Pro nhúng bằng `@font-face` trỏ về `public/fonts/`; client không hỗ trợ sẽ rơi về font hệ thống, nên mọi khối chữ phải đọc được với cả hai. Ảnh chỉ có logo, luôn kèm alt; không dùng ảnh banner vì client chặn ảnh theo mặc định.
 
-### Bốn trang đã triển khai
+### Năm route đã triển khai
 
-1. `/`: hero công trình + CTA hợp tác; nhóm sơn; câu chuyện nguồn gốc; gallery 6 ảnh không gian và công trình; khối hợp tác.
+1. `/`: ảnh banner thương hiệu full-bleed; dải giải pháp; nhóm sơn; câu chuyện nguồn gốc; gallery 6 ảnh không gian và công trình; khối hợp tác.
 2. `/gioi-thieu`: thương hiệu, nguồn gốc công nghệ Na Uy theo logo, cách tiếp cận giải pháp cho đại lý/nhà thầu.
-3. `/san-pham`: bảng màu tham khảo; danh mục nội thất, ngoại thất, sơn lót, chống thấm; bộ lọc, dialog bao bì kèm đặc tả và khuyến nghị thi công; CTA tư vấn.
-4. `/du-an`: gallery masonry 20 ảnh không gian và công trình, chỉ hiển thị ảnh kèm alt text mô tả; ghi rõ ảnh do chủ website cung cấp, chưa phải hồ sơ dự án đã xác minh.
+3. `/san-pham`: bảng màu tham khảo; danh mục nội thất, ngoại thất, sơn lót, chống thấm; bộ lọc và CTA tư vấn.
+4. `/san-pham/[slug]`: trang chi tiết từng sản phẩm — đặc tính nổi bật, ứng dụng, thành phần cấu tạo, điều kiện thi công, chỉ tiêu kỹ thuật, an toàn bảo quản, sản phẩm cùng nhóm.
+5. `/du-an`: gallery masonry 20 ảnh không gian và công trình, chỉ hiển thị ảnh kèm alt text mô tả; ghi rõ ảnh do chủ website cung cấp, chưa phải hồ sơ dự án đã xác minh.
 
 ### Tương tác và accessibility
 
