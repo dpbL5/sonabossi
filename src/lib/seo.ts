@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { productPath, type Product } from "@/lib/products";
 
 // Canonical origin confirmed by the site owner. SITE_URL permits an explicit deployment override.
 export const siteUrl = new URL(process.env.SITE_URL || "https://sonabossi.com");
@@ -29,6 +30,27 @@ export function pageMetadata(path: keyof typeof seoPages): Metadata {
   const { title, description } = seoPages[path];
   const url = new URL(path, siteUrl);
   const images = [{ url: new URL('/secBanner.png', siteUrl).href, width: 1859, height: 846, alt: 'Các nhóm sản phẩm sơn ABOSSI' }];
+  return {
+    title: { absolute: title },
+    description,
+    alternates: { canonical: url },
+    openGraph: { type: 'website', locale: 'vi_VN', siteName: 'Sơn ABOSSI', title, description, url, images },
+    twitter: { card: 'summary_large_image', title, description, images },
+  };
+}
+
+export function productMetadata(product: Product): Metadata {
+  const url = new URL(productPath(product.id), siteUrl);
+  const title = `${product.name} — ${product.code} | Sơn ABOSSI`;
+  const description = product.summary;
+  const images = [
+    {
+      url: new URL(product.image, siteUrl).href,
+      width: 1280,
+      height: 1280,
+      alt: `${product.name} — ${product.code} — Sơn ABOSSI`,
+    },
+  ];
   return {
     title: { absolute: title },
     description,

@@ -12,6 +12,8 @@ const links = [
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
   useEffect(() => {
     if (!open) return;
     const close = (event: KeyboardEvent) => {
@@ -47,7 +49,7 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                aria-current={pathname === href ? "page" : undefined}
+                aria-current={isActive(href) ? "page" : undefined}
               >
                 {label}
               </Link>
@@ -89,7 +91,7 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                aria-current={pathname === href ? "page" : undefined}
+                aria-current={isActive(href) ? "page" : undefined}
                 onClick={() => setOpen(false)}
               >
                 {label}

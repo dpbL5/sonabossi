@@ -206,6 +206,33 @@
         "label": "Định mức tham khảo",
         "value": "1–1,2 kg/m² cho 2 lớp"
       }
+    ],
+    "composition": [
+      "Nhựa polymer gốc nước",
+      "Xi măng pha theo tỉ lệ hướng dẫn trên bao bì",
+      "Nước sạch và phụ gia chống thấm"
+    ],
+    "criteria": [
+      {
+        "name": "Độ thấm nước dưới áp lực thủy tĩnh 1,5 bar trong 7 ngày",
+        "unit": "",
+        "result": "Không thấm"
+      },
+      {
+        "name": "Cường độ bám dính sau khi ngâm nước",
+        "unit": "MPa",
+        "result": "0,78"
+      },
+      {
+        "name": "Cường độ bám dính sau khi lão hóa",
+        "unit": "MPa",
+        "result": "0,82"
+      },
+      {
+        "name": "Khả năng tạo cầu vết nứt ở điều kiện thường",
+        "unit": "mm",
+        "result": "0,57"
+      }
     ]
   },
   {
